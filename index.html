@@ -44,24 +44,23 @@
 				</section>
 
 				<section class="stock-questions">
-					<div class="stock-question">
+					<div class="stock-question" ng-repeat="q in stockQuestions">
 						<div class="question-col">
-							<span>What is your name</span>
+							<span>{{q.Name}}</span>
 						</div>
 
 						<div class="type-col">
-							<span>Short Answer</span>
+							<span>{{q.Type}}</span>
 						</div>
 
 						<div class="plugins-col">
 							<!-- These will be material chips -->
-							<span>RIGHTBRIDGE</span>
-							<span>FIRELIGHT</span>
+							<span>{{q.Plugins}}</span>
+							<!--<span>FIRELIGHT</span>-->
 						</div>
 
 						<div class="timestamp-col">
-							<!-- Use Angular filter to format timestamp -->
-							<span>2-4-17</span>
+							<span>{{q.TimeStamp | date: 'MM/dd/yyyy'}}</span>
 						</div>
 					</div>
 				</section>
