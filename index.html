@@ -1,0 +1,74 @@
+<!Doctype html>
+<html>
+	<head>
+		<title>Column | Layout</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<link href="dist/css/bundle.css" rel="stylesheet">
+	</head>
+
+	<body ng-app="colland">
+		<main ng-controller="mainCtrl">
+			<section class="stock-questions-wrap">
+				<section class="search-add-section">
+					<div class="left-text">
+						<h3>Manage Stock Questions</h3>
+						<a href="#">Back to home</a>
+					</div>
+					
+					<div class="right-text">
+						<button>
+							Add Question
+						</button>
+
+						<input type="text" placeholder="Search..">
+					</div>
+				</section>
+
+				<section class="column-wrap">
+					<div class="question-label">
+						<span>Question</span>
+					</div>
+
+					<div class="type-label">
+						<span>Type</span>
+					</div>
+
+					<div class="plugins-label">
+						<span>Plugins</span>
+					</div>
+
+					<div class="timestamp-label">
+						<span>Last Updated</span>
+					</div>
+				</section>
+
+				<section class="stock-questions">
+					<div class="stock-question">
+						<div class="question-col">
+							<span>What is your name</span>
+						</div>
+
+						<div class="type-col">
+							<span>Short Answer</span>
+						</div>
+
+						<div class="plugins-col">
+							<!-- These will be material chips -->
+							<span>RIGHTBRIDGE</span>
+							<span>FIRELIGHT</span>
+						</div>
+
+						<div class="timestamp-col">
+							<!-- Use Angular filter to format timestamp -->
+							<span>2-4-17</span>
+						</div>
+					</div>
+				</section>
+			</section>
+		</main>
+
+		<script src="src/js/vendor/angular.js"></script>
+		<script src="src/js/app.js"></script>
+	</body>
+</html>

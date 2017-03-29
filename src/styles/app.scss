@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #edeff0;
+}
+
+$label-background-color: #D3D3D3;
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+$header-font-size: 1.3rem;
+
+@mixin labelish {
+    padding: 10px;
+    background-color: $label-background-color;
+    border: 3px solid #edeff0;
+    color: $primary-text-color;
+    font-weight: bold;
+}
+
+@mixin q {
+    padding: 10px;
+    background-color: #BDBDBD;
+    border: 3px solid #edeff0;
+}
+
+.stock-questions-wrap {
+    margin: 4%;
+
+    .search-add-section {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+
+        .left-text {
+
+        }
+
+        .right-text {
+
+        }
+
+    }
+
+    .column-wrap {
+        display: flex;
+
+        .question-label {
+            @include labelish;
+            width: 40%;
+        }
+
+        .type-label {
+            @include labelish;
+            width: 18%;
+        }
+
+        .plugins-label {
+            @include labelish;
+            width: 21%;
+        }
+
+        .timestamp-label {
+            @include labelish;
+            width: 21%;
+        }
+
+    }
+
+    .stock-question {
+        display: flex;
+
+            .question-col {
+                @include q;
+                width: 40%;
+            }
+
+            .type-col {
+                @include q;
+                width: 18%;
+            }
+
+            .plugins-col {
+                @include q;
+                width: 21%;
+            }
+
+            .timestamp-col {
+                @include q;     
+                justify-content: center;           
+                width: 21%;
+            }
+
+
+    }
+
+}
